@@ -254,8 +254,8 @@ This automatically:
 ```bash
 python -m uvicorn app.main:app --reload
 ```
-- Backend URL: `http://127.0.0.1:8000`
-- API Documentation: `http://127.0.0.1:8000/docs` (Interactive Swagger UI)
+- Backend URL: `${import.meta.env.VITE_API_URL}`
+- API Documentation: `${import.meta.env.VITE_API_URL}/docs` (Interactive Swagger UI)
 
 **Terminal 2 - Start Frontend:**
 ```bash
@@ -280,8 +280,8 @@ npm run preview
 
 Once both servers are running:
 - **Frontend**: Open `http://localhost:5173` in your browser
-- **API Docs**: Open `http://127.0.0.1:8000/docs` for interactive API documentation
-- **API**: Backend available at `http://127.0.0.1:8000`
+- **API Docs**: Open `${import.meta.env.VITE_API_URL}/docs` for interactive API documentation
+- **API**: Backend available at `${import.meta.env.VITE_API_URL}`
 
 ---
 

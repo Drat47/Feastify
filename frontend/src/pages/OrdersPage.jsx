@@ -25,7 +25,7 @@ export default function OrdersPage({ handleLogout }) {
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:8000/orders', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/orders`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       if (!response.ok) throw new Error('Failed to fetch orders');
@@ -43,14 +43,14 @@ export default function OrdersPage({ handleLogout }) {
     setDetailsLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://127.0.0.1:8000/orders/${order.id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/orders/${order.id}`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       if (!response.ok) throw new Error('Failed to fetch order details');
       const details = await response.json();
       
       // Fetch restaurant data
-      const restaurantResponse = await fetch(`http://127.0.0.1:8000/restaurants/${order.restaurant_id}`);
+      const restaurantResponse = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants/${order.restaurant_id}`);
       const restaurantData = await restaurantResponse.json();
       
       setSelectedOrderDetails({ ...details, restaurantName: restaurantData.name });

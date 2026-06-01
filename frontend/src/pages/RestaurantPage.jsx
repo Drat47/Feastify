@@ -26,8 +26,8 @@ export default function RestaurantPage({ handleLogout }) {
     try {
       console.log('Fetching restaurant data for ID:', id);
       const [restaurantResponse, menuResponse] = await Promise.all([
-        fetch(`http://127.0.0.1:8000/restaurants/${id}`),
-        fetch(`http://127.0.0.1:8000/restaurants/${id}/menu`),
+        fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants/${id}`),
+        fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants/${id}/menu`),
       ]);
 
       if (!restaurantResponse.ok || !menuResponse.ok) {

@@ -21,8 +21,8 @@ export default function DashboardPage({ handleLogout }) {
 
   const fetchRestaurants = async () => {
     try {
-      console.log('Fetching restaurants from http://127.0.0.1:8000/restaurants');
-      const response = await fetch('http://127.0.0.1:8000/restaurants');
+      console.log(`Fetching restaurants from ${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants`);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const data = await response.json();
       console.log('Restaurants loaded:', data);

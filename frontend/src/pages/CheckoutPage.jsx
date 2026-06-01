@@ -31,7 +31,7 @@ export default function CheckoutPage({ handleLogout }) {
       setCart(cartData);
 
       if (cartData && cartData.restaurantId) {
-        const response = await fetch(`http://127.0.0.1:8000/restaurants/${cartData.restaurantId}/menu`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/restaurants/${cartData.restaurantId}/menu`);
         if (!response.ok) throw new Error('Failed to fetch menu');
         const menuData = await response.json();
         setMenu(menuData);
@@ -93,7 +93,7 @@ export default function CheckoutPage({ handleLogout }) {
       };
 
       const token = localStorage.getItem('token');
-      const response = await fetch('http://127.0.0.1:8000/orders', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/orders`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

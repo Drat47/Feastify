@@ -1,13 +1,5 @@
 # 🍽️ Feastify - Full-Stack Food Delivery Platform
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62B)](https://vitejs.dev/)
-[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://food-delivery-app-cvr1.vercel.app/)
-[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://food-delivery-app-9me0.onrender.com)
-[![Author](https://img.shields.io/badge/Author-Dharmesh%20Singhal-blue?style=for-the-badge)](https://github.com/dharmesh-singhal)
-
 A modern, production-ready, high-performance **Full-Stack Food Delivery Application** built with React 18, Vite, FastAPI, and SQLite. Featuring JWT authorization, role-based access, comprehensive cart management, tax and delivery fee calculations, order tracking, and a dynamic admin control panel.
 
 ---
